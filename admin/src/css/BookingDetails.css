@@ -1,0 +1,140 @@
+/* BookingDetails.css */
+
+.booking-details {
+  font-family: Arial, sans-serif;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa; /* Light background color */
+  margin-left: 220px;
+}
+
+h2 {
+  color: #5a5a5a; /* Dark text color */
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.user-container {
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #ffffff; /* White background color */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+.user-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #e9ecef; /* Light gray background color */
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.username {
+  font-weight: bold;
+  color: #343a40; /* Dark text color */
+}
+
+.collapse-icon {
+  font-size: 20px;
+  color: #343a40; /* Dark text color */
+}
+
+.booking-table {
+  padding: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  background-color: #6c757d; /* Maroon light tone color */
+  color: #ffffff; /* White text color */
+}
+
+table td {
+  background-color: #ffffff; /* White background color */
+}
+
+.add-booking-form {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #ffffff; /* White background color */
+}
+
+.add-booking-form h3 {
+  color: #6c757d; /* Maroon light tone color */
+}
+
+.add-booking-form input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.add-booking-form button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #6c757d; /* Maroon light tone color */
+  color: #ffffff; /* White text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-booking-form button:hover {
+  background-color: #5a6376; /* Darker maroon tone on hover */
+}
+
+/* BookingDetails.css */
+
+/* Existing styles... */
+
+table td button {
+  margin-right: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+table td button.edit-button {
+  background-color: #28a745; /* Green background for Edit button */
+  border: none;
+  color: #ffffff; /* White text color */
+  padding: 10px 15px;
+}
+
+table td button.delete-button {
+  background-color: #dc3545; /* Red background for Delete button */
+  border: none;
+  color: #ffffff; /* White text color */
+  padding: 10px 15px;
+}
+
+table td button.edit-button:hover,
+table td button.delete-button:hover {
+  filter: brightness(110%); /* Brighten on hover */
+}

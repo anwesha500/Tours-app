@@ -1,0 +1,111 @@
+/* UserDetails.css */
+
+.user-details {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f8f9fa; /* Light background color */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+  margin-left: 220px;
+}
+
+h2 {
+  color: #343a40; /* Dark text color */
+  margin-bottom: 20px;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.user-table th,
+.user-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.user-table th {
+  background-color: #6c757d; /* Maroon light tone color */
+  color: #ffffff; /* White text color */
+}
+
+.user-table td {
+  background-color: #ffffff; /* White background color */
+}
+
+.user-table td button {
+  margin-right: 5px;
+  cursor: pointer;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.user-table td button.delete-button {
+  background-color: #dc3545; /* Red background for Delete button */
+  color: #ffffff; /* White text color */
+}
+
+.user-table td button.edit-button {
+  background-color: #28a745; /* Green background for Edit button */
+  color: #ffffff; /* White text color */
+}
+
+.user-table td button:hover {
+  filter: brightness(110%); /* Brighten on hover */
+}
+
+.add-user-form-container {
+  margin-top: 20px;
+}
+
+.add-user-form-container h2 {
+  color: #6c757d; /* Maroon light tone color */
+  margin-bottom: 10px;
+}
+
+.add-user-form {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #ffffff; /* White background color */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+.add-user-form label {
+  display: block;
+  margin-bottom: 10px;
+  color: #495057; /* Dark text color */
+}
+
+.add-user-form input[type="text"],
+.add-user-form input[type="email"] {
+  width: calc(100% - 22px);
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+
+.add-user-form button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #6c757d; /* Maroon light tone color */
+  color: #ffffff; /* White text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-user-form button:hover {
+  filter: brightness(110%); /* Brighten on hover */
+}

@@ -1,0 +1,42 @@
+/* AddUserForm.css */
+
+.add-user-form {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #ffffff; /* White background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+  }
+  
+  .add-user-form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #495057; /* Dark text color */
+  }
+  
+  .add-user-form input[type="text"],
+  .add-user-form input[type="email"],
+  .add-user-form input[type="password"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 5px;
+  }
+  
+  .add-user-form button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #6c757d; /* Maroon light tone color */
+    color: #ffffff; /* White text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-user-form button:hover {
+    filter: brightness(110%); /* Brighten on hover */
+  }
+  
