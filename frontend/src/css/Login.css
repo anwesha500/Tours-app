@@ -1,0 +1,81 @@
+.login-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-container label {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"],
+.login-container input[type="email"] {
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+  transition: border-color 0.2s ease-in-out;
+  display: block; /* Ensure inputs are displayed as block elements */
+  width: 100%; /* Ensure inputs take up full width of container */
+}
+
+.login-container input[type="text"]:focus,
+.login-container input[type="password"]:focus,
+.login-container input[type="email"]:focus {
+  border-color: #007bff;
+}
+
+.login-container button {
+  padding: 12px 0; /* Adjusted padding for better height */
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+  width: 100%; /* Ensure button takes up full width of container */
+}
+
+.login-container button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+.login-container p {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.login-container p span {
+  color: #007bff;
+  cursor: pointer;
+}
+
+.login-container p span:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+  display: block; /* Ensure error message is displayed as a block element */
+}

@@ -1,0 +1,116 @@
+.dashboard-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 2em;
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px; /* Added margin bottom for spacing */
+}
+
+p {
+  text-align: center;
+  color: #666;
+}
+
+.user-details {
+  margin-top: 20px; /* Added margin top for spacing */
+}
+
+.user-details h2 {
+  font-size: 1.5em;
+  color: #333;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.user-details p {
+  margin: 10px 0; /* Added margin for better spacing */
+}
+
+.booked-list {
+  margin-top: 20px;
+}
+
+.booked-list h2 {
+  font-size: 1.5em;
+  color: #333;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.booked-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.booked-list li {
+  background-color: #fff;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.booked-list li strong {
+  color: #333;
+}
+
+.booked-list li hr {
+  margin-top: 10px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 12px; /* Increased padding for better button appearance */
+  margin-top: 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.user-details {
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-details h2 {
+  font-size: 1.5em;
+  color: #333;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 20px; /* Added margin bottom for spacing */
+}
+
+.user-details p {
+  color: #666;
+  margin-bottom: 10px; /* Added margin bottom for spacing */
+}
+
+.user-details hr {
+  margin-top: 20px; /* Increased margin top for separation */
+}

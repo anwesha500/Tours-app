@@ -1,0 +1,33 @@
+/* src/pages/About.css */
+
+.about-container {
+    height: 90vh;
+    background: url("../assets/images/Aniiiiiiiii.jpg") no-repeat center center;
+    background-size: cover;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .about-container h1,
+  .about-container p {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  .about-container h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color:#abcc7d
+  }
+  
+  .about-container p {
+    font-size: 18px;
+    line-height: 1.6;
+    color:#abcc7d
+  }
+  

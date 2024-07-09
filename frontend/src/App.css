@@ -1,0 +1,65 @@
+.App {
+  min-height: 100vh;
+  background-color: rgba(f, f, f, 0.5); /* Fallback color */
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+/* src/Parallax.css */
+
+/* Global styles */
+body,
+html {
+  margin: 0;
+  font: 16px 'Arial', sans-serif; /* Changed font to Arial for simplicity */
+
+  height: 100%;
+}
+
+.content {
+  color: #777;
+  background-color: white;
+  text-align: justify;
+  padding: 50px 80px;
+}
+
+h3 {
+  text-transform: uppercase;
+  color: #111;
+  text-align: center;
+  font-family: 'Helvetica', sans-serif; /* Example of changing font-family */
+  font-size: 24px; /* Adjusted font size */
+  margin-bottom: 30px; /* Increased margin for better spacing */
+}
+
+p {
+  margin-bottom: 20px;
+  line-height: 1.6; 
+}
+
+.content-title {
+  position: absolute;
+  left: 0;
+  top: 45%;
+  width: 100%;
+  text-align: center;
+}
+
+.content-title .title {
+  color: #fff;
+  background-color: #111;
+  padding: 18px;
+  font-size: 28px; /* Increased font size */
+  letter-spacing: 2px; /* Adjusted letter spacing */
+  text-transform: uppercase;
+  text-decoration: none; /* Ensure links don't have underline */
+  transition: background-color 0.3s ease; /* Smooth hover effect transition */
+  border-radius: 5px; /* Rounded corners */
+  display: inline-block; /* Ensures padding works correctly */
+}
+
+.content-title .title:hover {
+  background-color: #333;
+}

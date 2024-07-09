@@ -1,0 +1,29 @@
+.box1,
+.box2,
+.box3,
+.box4 {
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  background-repeat: no-repeat;
+  background-size: cover; /* Cover entire container */
+  background-position: center; /* Center the background image */
+  background-attachment: fixed; /* Fixed position for parallax effect */
+  filter: brightness(80%); /* Adjust brightness to 80% */
+}
+
+
+.box1 {
+  background-image: url("../assets/images/Ani4.jpg");
+}
+
+.box2 {
+  background-image: url("../assets/images/Ani1.jpg");
+}
+
+.box3 {
+  background-image: url("../assets/images/Ani2.jpg");
+}
+
+.box4 {
+  background-image: url("../assets/images/Ani3.jpg");
+}
