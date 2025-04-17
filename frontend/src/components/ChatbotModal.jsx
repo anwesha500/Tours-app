@@ -4,7 +4,7 @@ import '../css/ChatbotModal.css';
 
 function ChatbotModal({ onClose }) {
   const [messages, setMessages] = useState([
-    { sender: 'bot', text: "Hello! I'm your AI Buddy. How can I help you today?" }
+    { sender: 'bot', text: "Hello! I'm your Nomad's AI Buddy. How can I help you today?" }
   ]);
   const [input, setInput] = useState('');
 
@@ -14,6 +14,15 @@ function ChatbotModal({ onClose }) {
     const newMessages = [...messages, { sender: 'user', text: input }];
     setMessages(newMessages);
     setInput('');
+
+    // Check for booking-related keywords
+    const bookingKeywords = ['book', 'booking', 'reserve', 'reservation'];
+    const lowerInput = input.toLowerCase();
+
+    if (bookingKeywords.some(keyword => lowerInput.includes(keyword))) {
+      setMessages(prev => [...prev, { sender: 'bot', text: 'Contact: 6290462865 OR nomadtravellers@hotmail.com' }]);
+      return;
+    }
 
     try {
       const res = await axios.post('http://localhost:3000/api/chat', {
@@ -35,7 +44,7 @@ function ChatbotModal({ onClose }) {
     <div className="chatbot-modal">
       <div className="chatbot-content">
         <div className="chatbot-header">
-          <span>AI Buddy 🤖</span>
+          <span>Nomad AI 🤖</span>
           <button className="close-btn" onClick={onClose}>×</button>
         </div>
 

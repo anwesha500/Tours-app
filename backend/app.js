@@ -26,14 +26,17 @@ app.use('/api/users', usersRoute);
 
 // Chatbot route (new route to handle chat)
 app.post('/api/chat', async (req, res) => {
-  const { userMessage } = req.body;
+  let { userMessage } = req.body;
 
   if (!userMessage) {
     return res.status(400).json({ error: 'No message provided' });
   }
 
+  // Prepend the prompt and append the userMessage from frontend
+  const modifiedMessage = "Your name is Nomad AI,Reply short and only Travelling and planning related questions to" + userMessage;
+
   try {
-    const result = await model.generateContent(userMessage);
+    const result = await model.generateContent(modifiedMessage);
     const response = await result.response;
     const text = response.text();
 
@@ -43,6 +46,7 @@ app.post('/api/chat', async (req, res) => {
     res.status(500).json({ error: 'Failed to get response from AI' });
   }
 });
+
 
 mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
