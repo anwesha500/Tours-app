@@ -15,15 +15,6 @@ function ChatbotModal({ onClose }) {
     setMessages(newMessages);
     setInput('');
 
-    // Check for booking-related keywords
-    const bookingKeywords = ['book', 'booking', 'reserve', 'reservation'];
-    const lowerInput = input.toLowerCase();
-
-    if (bookingKeywords.some(keyword => lowerInput.includes(keyword))) {
-      setMessages(prev => [...prev, { sender: 'bot', text: 'Contact: 6290462865 OR nomadtravellers@hotmail.com' }]);
-      return;
-    }
-
     try {
       const res = await axios.post('http://localhost:3000/api/chat', {
         userMessage: input

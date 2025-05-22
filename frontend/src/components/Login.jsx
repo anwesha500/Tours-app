@@ -10,50 +10,62 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [isRegistering, setIsRegistering] = useState(false);
   const [error, setError] = useState('');
-  const apiUrl = 'http://localhost:3000/api/auth'; // Adjust API URL based on your backend setup
+  const apiUrl = 'http://localhost:3000/api/auth';
   const navigate = useNavigate();
   const { login } = useContext(AuthContext);
 
   const validatePassword = (password) => {
-    const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    const regex =
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
     return regex.test(password);
+  };
+
+  const validateEmail = (email) => {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
   };
 
   const handleLogin = async () => {
     try {
       const response = await axios.post(`${apiUrl}/login`, {
         username,
-        password
+        password,
       });
       console.log('Login Success:', response.data);
-      login(response.data.token, response.data.user); // Save the token and user data, set authenticated state
-      navigate('/'); // Redirect to home page
+      login(response.data.token, response.data.user);
+      navigate('/');
     } catch (error) {
       console.error('Login Error:', error);
-      setError('Invalid credentials. Please try again.'); // Set error message
-      setUsername(''); // Reset username field
-      setPassword(''); // Reset password field
+      setError('Invalid credentials. Please try again.');
+      setUsername('');
+      setPassword('');
     }
   };
 
   const handleRegister = async () => {
-    if (!validatePassword(password)) {
-      setError('Password must be at least 8 characters long, contain a capital letter, a number, and a special character.');
+    if (!validateEmail(email)) {
+      setError('Please enter a valid email address.');
       return;
     }
-    
+
+    if (!validatePassword(password)) {
+      setError(
+        'Password must be at least 8 characters long, contain a capital letter, a number, and a special character.'
+      );
+      return;
+    }
+
     try {
       const response = await axios.post(`${apiUrl}/register`, {
         username,
         email,
-        password
+        password,
       });
       console.log('Register Success:', response.data);
       setUsername('');
       setEmail('');
       setPassword('');
-      setError(''); // Clear any previous error message
-      // Optionally, show a success message or redirect user
+      setError('');
     } catch (error) {
       console.error('Register Error:', error);
       if (error.response && error.response.data && error.response.data.message) {
@@ -73,7 +85,7 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setError(''); // Clear any previous error message
+    setError('');
     if (isRegistering) {
       handleRegister();
     } else {
@@ -88,17 +100,37 @@ const Login = () => {
         {isRegistering && (
           <div>
             <label>Email</label>
-            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
           </div>
         )}
         <label>Username</label>
-        <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} required />
+        <input
+          type="text"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          required
+        />
         <label>Password</label>
-        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+        <input
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
         <button type="submit">{isRegistering ? 'Register' : 'Login'}</button>
       </form>
-      {error && <p className="error-message">{error}</p>} {/* Display error message */}
-      <p>{isRegistering ? 'Already have an account?' : 'Don\'t have an account?'} <span onClick={() => setIsRegistering(!isRegistering)}>{isRegistering ? 'Login' : 'Register'}</span></p>
+      {error && <p className="error-message">{error}</p>}
+      <p>
+        {isRegistering ? 'Already have an account?' : "Don't have an account?"}{' '}
+        <span onClick={() => setIsRegistering(!isRegistering)}>
+          {isRegistering ? 'Login' : 'Register'}
+        </span>
+      </p>
     </div>
   );
 };
